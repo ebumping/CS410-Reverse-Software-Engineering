@@ -1,0 +1,53 @@
+COMMANDS:
+
+(assuming you are in the correct directory)
+
+execute a file:
+
+g++ -g fileName.o
+
+./a.out
+
+ 
+
+generate a .o file from a .cpp file:
+
+g++ -c fileName.cpp
+
+ 
+
+generate assembly from a .cpp file:
+
+g++ -S fileName.cpp
+
+ 
+
+generate new linked .o file to be able to read function calls:
+
+g++ -o fileNameLinked.o fileName.o
+
+ 
+
+extract assembly from linked file:
+
+gdb fileNameLinked.o
+
+disassemble functionName *no parentheses
+
+ 
+
+extract all function Names from a file:
+
+gdb fileName.o
+
+info functions
+
+ 
+
+extract all strings used in a file:
+
+/workspace/directoryName$ strings fileName.o
+
+ObjectDump with light formatting
+
+objdump -d  _ | cut -f3,4
